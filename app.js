@@ -20,7 +20,7 @@ function marcar() {
     }
     var horaAtual = new Date().toLocaleTimeString([],{ hour:'2-digit', minute:'2-digit' });
     contarMarcacoes++;
-    divMarcar.innerHTML += `<p>${contarMarcacoes} - ${horaAtual}</p>`;
+    divMarcar.innerHTML += `<p>${(contarMarcacoes < 10? '0' + contarMarcacoes : contarMarcacoes)} - ${horaAtual}</p>`;
 }
 
 function beberAgua(valor) {
