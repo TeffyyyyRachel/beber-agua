@@ -37,13 +37,15 @@ function beberAgua(valor) {
 }
 
 function zerar() {
-    totalBebido = 0;
-    porcentagemTotal = 0;
-    document.getElementById('porcentagem-atingida').style.height = porcentagemTotal + '%';
-    document.getElementById('porcentagem-atingida').innerText = "";
-    document.querySelector('title').innerText = 'Beber Água';
-    divMarcar.innerHTML = '<p id="vazio">vazio</p>';
-    marcacoesVazio = document.getElementById('vazio');
-    contarMarcacoes = 0;
-    vazio = true;
+    if (confirm("Deseja zerar o contador?")){
+        totalBebido = 0;
+        porcentagemTotal = 0;
+        document.getElementById('porcentagem-atingida').style.height = porcentagemTotal + '%';
+        document.getElementById('porcentagem-atingida').innerText = "";
+        document.querySelector('title').innerText = 'Beber Água';
+        divMarcar.innerHTML = '<p id="vazio">vazio</p>';
+        marcacoesVazio = document.getElementById('vazio');
+        contarMarcacoes = 0;
+        vazio = true;
+    }
 }
